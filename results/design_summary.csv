@@ -1,0 +1,10 @@
+metric,value,unit
+X width at 50%,1.4991285334946,mm
+Y full width at 1/e^2,0.802662374349892,um
+X central-90% min/max uniformity,99.7274806835536,%
+X central-90% RMS uniformity,99.9666573539468,%
+Optical length,400,mm
+Last lens to target,14.0723202878519,mm
+Y cylinder focal length,14.0723202878519,mm
+DOE beam diameter X,10.4927698062194,mm
+DOE beam diameter Y,9.54085609045249,mm

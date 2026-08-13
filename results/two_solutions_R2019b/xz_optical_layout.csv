@@ -1,0 +1,20 @@
+solution,elementID,z_mm,powerAxis,focalLengthX_mm,description
+Vendor,LASER,0,-,Inf,355 nm laser
+Vendor,SBE1,30,XY,-10,First optic: spherical negative expander lens
+Vendor,SBE2,80,XY,60,Spherical positive expander lens
+Vendor,DOE,150,X phase,Inf,Line phase DOE
+Vendor,YBE1,180,Y,Inf,Y-only negative cylindrical expander lens
+Vendor,YBE2,340.800015352393,Y,Inf,Y-only positive cylindrical expander lens
+Vendor,CXC1,420,X,150,X-only positive angular compressor cylinder
+Vendor,CXC2,524.706507529123,X,-45.2934924708769,X-only negative angular compressor cylinder
+Vendor,XFL/YFL,600,X+Y,100,Crossed X/Y f=100 mm focusing cylinders
+Vendor,TARGET,700,-,Inf,Focal line target; phase unavailable
+In-house,LASER,0,-,Inf,355 nm laser
+In-house,SBE1,30,XY,-10,First optic: spherical negative expander lens
+In-house,SBE2,80,XY,60,Spherical positive expander lens
+In-house,YBE1,180,Y,Inf,Y-only negative cylindrical expander lens
+In-house,YBE2,340.800015352393,Y,Inf,Y-only positive cylindrical expander lens
+In-house,DOE1,400,X phase,Inf,Inverse-designed X phase DOE
+In-house,YFL,600,Y,Inf,Y-only f=100 mm focusing cylinder
+In-house,DOE2/OUT,700,X phase,Inf,X phase corrector: flat-wavefront output plane
+In-house,VERIFY,750,-,Inf,50 mm post-output diffraction verification plane

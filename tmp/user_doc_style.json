@@ -1,0 +1,165 @@
+{
+  "input": "D:\\work\\git_share\\laser_sim\\deliverables\\HOLOOR_CBSM_LINE_355nm_package\\HOLOOR_355nm\u51c6\u76f4\u7ebf\u5149\u6280\u672f\u65b9\u6848.docx",
+  "fonts_by_char_count": {
+    "\u5fae\u8f6f\u96c5\u9ed1": 4575
+  },
+  "direct_run_formatting_runs": 239,
+  "direct_paragraph_formatting_paragraphs": 189,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 76,
+      "text": "\u7c7b\u522b",
+      "style": "Normal"
+    },
+    {
+      "para_index": 77,
+      "text": "\u53c2\u6570",
+      "style": "Normal"
+    },
+    {
+      "para_index": 78,
+      "text": "\u8bbe\u8ba1\u503c/\u7ea6\u675f",
+      "style": "Normal"
+    },
+    {
+      "para_index": 79,
+      "text": "\u5b9a\u4e49",
+      "style": "Normal"
+    },
+    {
+      "para_index": 120,
+      "text": "\u9879\u76ee",
+      "style": "Normal"
+    },
+    {
+      "para_index": 121,
+      "text": "\u6700\u7ec8\u8def\u7ebf",
+      "style": "Normal"
+    },
+    {
+      "para_index": 132,
+      "text": "\u9636\u6bb5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 133,
+      "text": "\u4f5c\u7528\u8f74",
+      "style": "Normal"
+    },
+    {
+      "para_index": 134,
+      "text": "\u529f\u80fd",
+      "style": "Normal"
+    },
+    {
+      "para_index": 153,
+      "text": "ID",
+      "style": "Normal"
+    },
+    {
+      "para_index": 154,
+      "text": "Z / mm",
+      "style": "Normal"
+    },
+    {
+      "para_index": 155,
+      "text": "\u4f5c\u7528\u8f74",
+      "style": "Normal"
+    },
+    {
+      "para_index": 156,
+      "text": "\u7126\u8ddd / \u529f\u80fd",
+      "style": "Normal"
+    },
+    {
+      "para_index": 157,
+      "text": "\u8bf4\u660e",
+      "style": "Normal"
+    },
+    {
+      "para_index": 213,
+      "text": "\u9879\u76ee",
+      "style": "Normal"
+    },
+    {
+      "para_index": 214,
+      "text": "\u8bb0\u5f55",
+      "style": "Normal"
+    },
+    {
+      "para_index": 229,
+      "text": "\u6307\u6807",
+      "style": "Normal"
+    },
+    {
+      "para_index": 230,
+      "text": "\u8ba1\u7b97\u503c",
+      "style": "Normal"
+    },
+    {
+      "para_index": 231,
+      "text": "\u8bbe\u8ba1\u5224\u636e",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "355 nm HOLO/OR \u6574\u5f62\u6280\u672f\u65b9\u6848",
+        "style": "Title"
+      },
+      {
+        "para_index": 2,
+        "run_text": "\u8bbe\u8ba1\u8981\u6c42",
+        "style": "Subtitle"
+      },
+      {
+        "para_index": 2,
+        "run_text": "X\uff1a1.5 mm \u8fd1\u4f3c\u5e73\u884c Top-Hat \u00b7 Y\uff1a1.0 \u00b5m \u805a\u7126 ",
+        "style": "Subtitle"
+      },
+      {
+        "para_index": 2,
+        "run_text": " \u603b\u957f1\u7c73\uff0c\u6700\u6709\u4e00\u7247\u955c\u5b50\u805a\u7126\u8ddd\u79bb100mm",
+        "style": "Subtitle"
+      },
+      {
+        "para_index": 3,
+        "run_text": "\u8bbe\u8ba1  ",
+        "style": "Normal"
+      }
+    ],
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 8,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 11,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 14,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 16,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 21,
+        "text": "\u56fe 1  \u6700\u7ec8 HOLO/OR \u51c6\u76f4\u7ebf\u5149\u65b9\u6848 XZ \u5149\u8def\u3002YFL \u4e3a\u865a\u7ebf\uff0c\u8868\u793a X \u5149\u7126\u5ea6\u4e3a 0\u3002",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

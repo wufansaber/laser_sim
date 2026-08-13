@@ -1,0 +1,64 @@
+﻿P000	Title	355 nm HOLO/OR 整形技术方案
+P001	Subtitle	设计要求X：1.5 mm 近似平行 Top-Hat · Y：1.0 µm 聚焦  总长1米，最有一片镜子聚焦距离100mm
+P002	Normal	设计  X 向采用 +160/-40 mm、间距 120 mm 的 4× 无焦缩束组，把 6 mm 准直线光缩为 1.5 mm； YFL 在 X 平面为无光焦度，所以不会把 X 聚焦。Y 向独立扩束至 54.24 mm 后由 fY=100 mm 柱面镜聚焦至 1.0 µm。
+P003	Heading 1	方案介绍
+P004	Normal	本版修正了此前将 z=600 mm 元件写成 XFL/YFL 的错误。正确结构是 YFL：只对 Y 聚焦，X 方向没有光焦度；XZ 图中该元件以虚线表示，X 光束在其前后保持约 1.5 mm 宽。
+P005	Normal	由于最终 X 指标是“1.5 mm 近似平行光”，所选 HOLO/OR 产品为定制 Collimated Beam Shaper Module。HOLO/OR 官方资料把准直输出定义为双元件模块：第一元件完成强度重分配，第二元件展平相位。
+P006	Heading 1	1. 需求与设计输入
+P008	Heading 1	2. HOLO/OR 产品选择
+P009	Normal	最终选择：HOLO/OR Collimated Beam Shaper Module，定制 355 nm、6 mm 输入、X 向线形平顶输出。官方页面给出该系列可定制 lines 等形状，并说明输出形状可在较长传播范围保持准直；正式尺寸、效率、口径和料号必须由 HOLO/OR 报价确认。
+P011	Heading 1	3. 系统方案与元件表
+P012	Heading 2	3.1 功能链
+P014	Heading 2	3.2 元件位置与光焦度
+P016	Normal	z=600 mm 的元件必须在采购图和装调图中标注为 YFL，而不是 XFL/YFL。其柱轴方向应使 X 平面看到平行平板或零功率通道；不允许在 X 方向引入 f=100 mm 的二次相位
+P017	Heading 1	4. XZ / YZ 光路图
+P018	Heading 2	4.1 XZ 平面：X 近似平行光
+P020	Normal	图 1  最终 HOLO/OR 准直线光方案 XZ 光路。YFL 为虚线，表示 X 光焦度为 0。
+P021	Normal	SBE1/SBE2 将 X 从 1 mm 扩到 6 mm。CBSM1/CBSM2 后 X 保持准直；CXC1/CXC2 只做一次无焦缩束，z=550 mm 后到目标面保持约 1.5 mm。图中的红色边界是近轴几何包络；是否达到微弧度波前指标必须使用复场相位计算或波前实测。
+P023	Heading 2	4.2 YZ 平面：Y 向 100 mm 工作距离聚焦
+P025	Normal	图 2  最终方案 YZ 光路。YBE1/YBE2 扩束，YFL 在 100 mm 后把 Y 聚焦到 1.0 µm。
+P026	Normal	由 dY=4M²λfY/(πDY) 得 DY=54.24 mm；留 10% 余量时 YFL 建议有效口径不小于 59.66 mm。该大口径只发生在 Y 方向，X 方向不跟随 Y 扩束，因此无需把所有元件做成约 60 mm 的圆口径。
+P028	Heading 1	5. 模型原理与相位证据
+P029	Heading 2	5.1 HOLO/OR 双元件准直整形原理
+P030	Normal	根据 HOLO/OR 对多元件准直整形器的说明，第一元件改变局部光线方向并完成输入高斯能量到目标线形分布的映射；第二元件消除由第一元件和传播产生的相位斜率，使输出波前重新接近平坦。
+P031	Normal	U_out(x)=A_out(x) exp[j φ_out(x)]
+P032	Normal	准直验收必须同时包含振幅 A_out 与相位 φ_out；只有 |U|² 不足以判定波前。
+P033	Normal	θ̄_x = (λ/2π) · dφ_fit/dx
+P034	Normal	R_x = π / (λ a₂),     φ_fit(x)=a₂x²+a₁x+a₀
+P035	Normal	相位 RMS 的计算只去除 piston 与平均倾角，不去除二次相位；这样残余曲率会真实进入准直判定。
+P036	Heading 1	6. 数学模型
+P037	Heading 2	6.1 双元件能量映射
+P038	Normal	∫_{-∞}^{x₁} |U_in(ξ)|² dξ = ∫_{-D/2}^{x₂} I_target(η) dη
+P039	Normal	一维能量守恒确定单调坐标映射 x₂=T(x₁)。
+P040	Normal	dφ₁/dx ≈ k (T(x)-x)/L,     φ₂(x₂) ≈ -arg{P_L[U_in e^{jφ₁}]}
+P041	Normal	独立模型用角谱传播算子 P_L 传播第一元件后的复场，再由第二元件抵消输出相位。当前对比模型采用平滑 8 阶超高斯作为理想准直模块的输出振幅，避免把不可制造的硬边阶跃当成真实面形。
+P042	Heading 2	6.2 X 向无焦缩束
+P043	Normal	M_CXC = L(-40) · P(120) · L(+160) = [[0.25, 120], [0, 4]]
+P044	Normal	矩阵的 C=0，说明输入平行边缘光线输出仍平行；A=0.25，说明 6 mm 宽度变为 1.5 mm。B=120 mm 不影响零角度输入的几何宽度。
+P045	Normal	M_X,total = P(150) · I_YFL,X · M_CXC,     I_YFL,X=[[1,0],[0,1]]
+P046	Normal	因此 z=600 mm 的 YFL 在 X 方向既不增加会聚角，也不改变 X 宽度。
+P047	Heading 2	6.3 Y 向焦斑
+P048	Normal	D_Y = 4 M² λ f_Y /(π d_Y) = 54.240 mm
+P049	Heading 2	6.4 波前与衍射的区分
+P050	Normal	平均相位斜率、二次相位曲率属于波前准直指标；有限口径传播引起的边缘衍射和局部相位起伏属于复场演化。验收不再使用 λ/D=237 µrad 作为“平行度”硬边界，而是直接测/算复场相位，并同时记录传播距离内的线宽变化。
+P052	Heading 1	7. MATLAB R2019b 实现
+P054	Heading 1	8. 仿真结果与判定
+P055	Heading 2	8.1 独立双元件复场对比
+P057	Normal	图 3  独立双元件复场模型经实际 CXC 后级传播的强度与局部相位角。
+P061	Heading 2	8.4 ST-426-I-Y-A 强度参考
+P063	Normal	图 4  本地 HOLO/OR TopHatSim.p 的 ST-426-I-Y-A 焦面线形强度参考。它不代表最终准直模块的相位。
+P064	Normal	该参考运行使用 355 nm、6 mm 输入光斑、15 mm CA、f=100 mm，在 R2019b 中得到约 0.452935 mm 的原生全 1/e² 线宽。它用于证明厂商黑箱的 MATLAB 调用和强度提取链路，不再用于证明终端 X 准直。
+P067	Heading 1	附录 B：官方资料
+P068	Normal	[1] HOLO/OR, Collimated Beam Shaper Module, https://www.holoor.co.il/collimated-beam-shaper/（访问：2026-08-13）。
+P069	Normal	[2] HOLO/OR, Beam Shaper product page, https://www.holoor.co.il/product/beam-shaper/（访问：2026-08-13）。
+P070	Normal	[3] HOLO/OR, FAQ, https://www.holoor.co.il/faq/（访问：2026-08-13）。
+P071	Normal	[4] HOLO/OR, Beam Shaper Advantages / Single vs Multi Element, https://www.holoor.co.il/beam-shaper-advantages/（访问：2026-08-13）。
+P072	Normal	[5] HOLO/OR, Top Hat Beam case study, https://www.holoor.co.il/top-hat-beam/（访问：2026-08-13）。
+P073	Normal	[6] HOLO/OR, TH MATLAB Tutorial，本资料包 04_official_references/TH_MATLAB_Tutorial.pdf。
+TABLES 6
+T00	11x4	类别 | 参数 | 设计值/约束 | 定义
+T01	6x2	项目 | 最终路线
+T02	7x3	阶段 | 作用轴 | 功能
+T03	12x5	ID | Z / mm | 作用轴 | 焦距 / 功能 | 说明
+T04	8x2	项目 | 记录
+T05	7x3	指标 | 计算值 | 设计判据

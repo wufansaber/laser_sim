@@ -1,0 +1,25 @@
+parameter,value,unit
+Wavelength,355,nm
+Input beam diameter,6,mm
+Clear aperture,15,mm
+Fourier focal length,110,mm
+Energy-map width,1.49179996132851,mm
+Phase levels,32,-
+Fused silica refractive index,1.47607188038016,-
+2pi relief depth,0.745685713923113,um
+Relief level step,0.0233026785600973,um
+Minimum local period,52.352863671111,um
+Scalar quantization efficiency,99.6791364044961,%
+Final X width exp(-2),1.50004332458354,mm
+Final X width 50%,1.49069322887971,mm
+Central 90% min/max uniformity,92.9872412814632,%
+Y width exp(-2),1,um
+Y cylinder focal length,100,mm
+Y beam diameter at final lens,54.2400046057179,mm
+Required Y clear aperture,59.6640050662897,mm
+Second spherical expander,9.04000076761965,x
+X compressor angular gain,9.04000076761965,x
+X compressor f1,150,mm
+X compressor f2,-16.5929189450165,mm
+Total optical length,700,mm
+Last lens to target,100,mm

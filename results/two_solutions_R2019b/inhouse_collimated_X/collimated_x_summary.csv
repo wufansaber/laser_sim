@@ -1,0 +1,23 @@
+parameter,value,unit
+Wavelength,355,nm
+Input X beam diameter,6,mm
+Clear aperture,15,mm
+DOE1 to DOE2/final plane,300,mm
+DOE2 to target,0,mm
+Phase levels,Inf,-
+X width after DOE2,1.49677304644392,mm
+X width at target,1.49677304644392,mm
+Uniformity after DOE2,99.6907587808138,%
+Uniformity at target,99.6907587808137,%
+Mean X angle after DOE2,1.00057620797153e-14,mrad
+Mean X angle at target,1.00050835197759e-14,mrad
+RMS local X angle after DOE2,1.74476450445636e-11,mrad
+RMS local X angle at target,1.74476734907199e-11,mrad
+Fitted X wavefront radius after DOE2,1.68982491119097e+15,mm
+Fitted X wavefront radius at target,1.68982685599869e+15,mm
+Final spherical lens fX,100,mm
+Final spherical lens fY,100,mm
+Terminal X phase-corrector power,Inf,Y: none
+Parallel tolerance RMS,10,urad
+Y full 1/e2 target width,1,um
+Overall pass,1,0/1

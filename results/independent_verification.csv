@@ -1,0 +1,9 @@
+metric,value,unit
+DOE beam diameter X,10.49276980621936,mm
+DOE beam diameter Y,9.54085609045249,mm
+Y cylinder focal length,14.072320287851852,mm
+X width at 50 percent,1.4993660395729174,mm
+Y full width at 1/e2,0.8021513767746045,um
+X central-90 percent min/max uniformity,99.72995688516906,%
+Optical length,400.0,mm
+Last lens distance,14.072320287851852,mm

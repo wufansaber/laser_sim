@@ -1,0 +1,130 @@
+{
+  "[Content_Types].xml": {
+    "size": 2187,
+    "sha256": "e61df8570ba1a641f6bfe2a0136a11a01cb8832af63d50460b51083f53d72cda"
+  },
+  "_rels/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "_rels/.rels": {
+    "size": 881,
+    "sha256": "7f663eedc15e218382778b72c260c3f011c9a60f379edfa4f242efafdc3cf08b"
+  },
+  "customXml/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "customXml/_rels/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "customXml/_rels/item1.xml.rels": {
+    "size": 296,
+    "sha256": "80482f86e196171d66001e0e74d1900408a3aaf2463e54005d251b5f2db9a0b0"
+  },
+  "customXml/item1.xml": {
+    "size": 243,
+    "sha256": "b7ebe617992e309f3bd5b187e28bccb75afc7cb92c4e7ea57801329b5c04c5ce"
+  },
+  "customXml/itemProps1.xml": {
+    "size": 236,
+    "sha256": "54cafba8fcbc886f8c496cf218e749c9eef7227a81a7531025f9bc9cc85581e8"
+  },
+  "docProps/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "docProps/app.xml": {
+    "size": 637,
+    "sha256": "37db6fc29a65bdc559c36b25076e3c31cf25b65c4f512a6e40078109c81fdb0b"
+  },
+  "docProps/core.xml": {
+    "size": 917,
+    "sha256": "da279616948d298ae80e1bfa49cb09baebf7221e77b8e883004233858bf9ec2f"
+  },
+  "docProps/custom.xml": {
+    "size": 750,
+    "sha256": "234114c168b92d76b792019471c731dbdd4d51f0c37a1e82190e8577e96db789"
+  },
+  "docProps/thumbnail.wmf": {
+    "size": 148902,
+    "sha256": "757c2f66a0341f39d699c931cf9be56a71e4426886d0715e84e0cab5f3447006"
+  },
+  "word/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "word/_rels/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "word/_rels/document.xml.rels": {
+    "size": 2008,
+    "sha256": "26c387a78649916a0d95bca6c1c1a83055ebb5dfcea4f81a5d2b0ee90db663e6"
+  },
+  "word/document.xml": {
+    "size": 280667,
+    "sha256": "64ecaff05b5c0b300522bf3b1bb0c3e408ac3422cf9fbaf93a3b8308810fba46"
+  },
+  "word/endnotes.xml": {
+    "size": 1596,
+    "sha256": "0bb3317d3770f08a4713efc1ec7e2cd753cfbe7b8d4e5eebfd957501cd005ec9"
+  },
+  "word/fontTable.xml": {
+    "size": 6381,
+    "sha256": "a347b5ce8b972e6b0f0e54fa07bea01767d7fb0edf5a0a20acbacc23b2753128"
+  },
+  "word/footer1.xml": {
+    "size": 1363,
+    "sha256": "9bbdbef9ac7fac569e02a11825c59bdb03a46c60b08b922b51d1bbf7c003e127"
+  },
+  "word/footnotes.xml": {
+    "size": 1652,
+    "sha256": "d10158a44fd6fda60851401e3ecf54f73978fc441f055c0951ef058ea25186d1"
+  },
+  "word/header1.xml": {
+    "size": 1363,
+    "sha256": "82f9b2a684d098b27d01bff6d59952f6bf807a9c25cf6a5b77b99500242cee26"
+  },
+  "word/media/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "word/media/image1.png": {
+    "size": 113050,
+    "sha256": "f82e26576665f271fe092db122f231d0eed14d0067550ade403443473277af75"
+  },
+  "word/media/image2.png": {
+    "size": 127167,
+    "sha256": "2d73a1915de01d23e8035a347ff65b9d3bda0b32f0225764d1848d1b8b6201b9"
+  },
+  "word/media/image3.png": {
+    "size": 86999,
+    "sha256": "532adbad2f5eb9f8f734ad0247ebbc5c7ae545a581de7a120a814892ee747db9"
+  },
+  "word/media/image4.png": {
+    "size": 32242,
+    "sha256": "aece2709a6fcc5c6905c1414b00df2257a68eb7e91f3c40986654f50f22e5cb6"
+  },
+  "word/numbering.xml": {
+    "size": 4189,
+    "sha256": "323b62d8d2dce448106cd7dfa8de69852e7af961bd70497bd69e4bbe34f7543a"
+  },
+  "word/settings.xml": {
+    "size": 2686,
+    "sha256": "8d96cd53eb0c7514558d4b9b045b73730b5dd81947d13ac6ceebef2194dbff1b"
+  },
+  "word/styles.xml": {
+    "size": 357739,
+    "sha256": "df507375146b72e3b385938d3eac1f29a4814bf1435b46f94608d650117db5ee"
+  },
+  "word/theme/": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "word/theme/theme1.xml": {
+    "size": 7621,
+    "sha256": "6c2ccb074eb96187e7e5698447de5d130e10a7d833daba034ef35cb593864a19"
+  }
+}

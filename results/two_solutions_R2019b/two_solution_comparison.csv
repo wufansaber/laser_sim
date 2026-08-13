@@ -1,0 +1,3 @@
+model,xWidthE2_mm,xWidth50_mm,yWidthE2_um,uniformityPercent,xWavefrontRms_urad,collimationVerified,totalLength_mm,lastLensDistance_mm,pass
+Vendor ST-426-I-Y-A,1.5,1.47449598398033,1,99.4777728473749,NaN,0,700,100,0
+In-house two-DOE collimated mapper,1.49677304644392,1.49076730214161,1,99.6907587808137,1.74476734907199e-08,1,700,100,1

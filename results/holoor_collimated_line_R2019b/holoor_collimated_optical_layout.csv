@@ -1,0 +1,12 @@
+ids,z,axisPower,fX,fY,description
+LASER,0,-,Inf,Inf,355 nm laser
+SBE1,30,XY,-10,-10,First optic: spherical negative expander
+SBE2,80,XY,60,60,Spherical positive expander
+CBSM1,150,X phase,Inf,Inf,Custom HOLO/OR collimated-line module DOE 1
+CBSM2,220,X phase,Inf,Inf,Custom module phase-flattening DOE 2
+YBE1,250,Y,Inf,-20,Y-only negative cylinder
+YBE2,410.800015352393,Y,Inf,180.800015352393,Y-only positive cylinder
+CXC1,430,X,160,Inf,X-only positive compressor cylinder
+CXC2,550,X,-40,Inf,X-only negative compressor cylinder
+YFL,600,Y,Inf,100,Last lens: Y-only fY=100 mm; zero X power
+TARGET,700,-,Inf,Inf,X approx. collimated 1.5 mm; Y focused 1.0 um

@@ -1,0 +1,2 @@
+phaseDataAvailable,phaseVerified,phaseRms_rad,residualTilt_rad,wavefrontRadius_mm,message
+0,0,NaN,NaN,NaN,HOLO/OR complex-field/phase file missing: X collimation not verified.
