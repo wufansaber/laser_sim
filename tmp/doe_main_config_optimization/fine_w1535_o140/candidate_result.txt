@@ -1,0 +1,10 @@
+name=fine_w1535_o140
+designWidth_mm=1.535000000
+superGaussianOrder=140
+jointIterations=720
+measuredWidth_mm=1.525597288652
+uniformity_percent=82.003505204406
+meanTilt_urad=0.624443168376
+curvatureEdgeSlope_urad=5.538919640585
+widthChange100mm_percent=1.291614559352
+pass=0

@@ -2,6 +2,18 @@ parameter,valueText,unitText
 Vendor family,HOLO/OR Collimated Beam Shaper Module,-
 Engineering ID,CBSM-LINE-355-6MM-CUSTOM,-
 Vendor PN status,Custom RFQ; final HOLO/OR PN pending,-
+Laser coherence,Fully coherent CW,-
+Laser waist location,0.000000,mm
+Laser waist X diameter,1.000000,mm
+Laser waist Y diameter,1.000000,mm
+Laser ellipticity,1.000000,-
+Laser ellipse rotation,0.000000,deg
+Laser M2X,1.200000,-
+Laser M2Y,1.200000,-
+Laser X full divergence,0.000542400046,rad full
+Laser Y full divergence,0.000542400046,rad full
+Laser X Rayleigh range,1843.657661,mm
+Laser Y Rayleigh range,1843.657661,mm
 Wavelength,355,nm
 Module input beam,6.000000,mm
 Module X output width,6.000000,mm
@@ -20,4 +32,7 @@ HOLO/OR phase data available,0,-
 HOLO/OR phase verified,0,-
 Y beam diameter at YFL,54.240005,mm
 Suggested YFL clear aperture,59.664005,mm
+Calculated target Y width,0.001000000,mm
+Calculated Y waist distance after YFL,100.000043556,mm
+Y propagation pass,1,-
 Total length,700.000000,mm

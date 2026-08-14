@@ -1,18 +1,39 @@
 parameter,value,unit
-Model identity,Independent two-element complex-field phase surrogate,-
+Model identity,Independent two-element quantized fused-silica relief phase surrogate,-
 Vendor proprietary phase,No,-
+Coherence,Fully coherent CW,-
+Laser waist location,0,mm
+Laser waist X diameter,1,mm
+Laser X M2,1.2,-
+Laser X full divergence,0.542400046057179,mrad full angle
+Laser X Rayleigh range,1843.65766055739,mm
+Laser ellipticity,1,-
+Laser ellipse rotation,0,deg
+SBE output / module input width,6.0009765625,mm
 Wavelength,355,nm
 Element separation,70,mm
-Module exit width,6,mm
+Module exit width,6.2,mm
 Super-Gaussian order,8,-
-Target measured width,1.50390625,mm
-Target width error,0.260416666666667,%
-Exit phase RMS,0,rad
-Target phase RMS,0.037846408660801,rad
-Exit mean wavefront tilt,0,urad
-Target mean wavefront tilt,-5.41886425424475e-12,urad
-Exit RMS local diffraction angle,0,urad
-Target RMS local diffraction angle,21.2119217858915,urad
-Target fitted wavefront radius,-27433.0564148103,mm
-Target curvature edge slope,27.3392796143232,urad
+Phase-optimization iterations,100,-
+DOE substrate index,1.47607188038016,-
+DOE phase levels,32,-
+DOE binary masks,5,-
+DOE requested minimum feature,10,um
+DOE actual cell pitch,10.986328125,um
+DOE patterned X width,8,mm
+DOE design output X width,6.2,mm
+DOE 2pi relief depth,0.745685713923113,um
+DOE relief height step,0.0233026785600973,um
+Ideal phase-quantization efficiency,99.6791364044961,%
+Target measured width,1.4990234375,mm
+Target width error,0.0651041666666667,%
+Exit phase RMS,0.230445631419034,rad
+Target phase RMS,0.0610995347134886,rad
+Phase RMS acceptance limit,0.12,rad
+Exit mean wavefront tilt,-0.07685514222338,urad
+Target mean wavefront tilt,-0.549849194662403,urad
+Exit RMS local diffraction angle,7270.24591283244,urad
+Target RMS local diffraction angle,886.927396979468,urad
+Target fitted wavefront radius,-24518.4851108316,mm
+Target curvature edge slope,30.5891655463114,urad
 Surrogate pass,1,0/1

@@ -1,9 +1,16 @@
 MATLAB version: 9.7.0.1190202 (R2019b)
 MATLAB release: 2019b
-Execution date: 2026-08-13 10:49:19
+Execution date: 2026-08-14 11:38:38
 Vendor family: HOLO/OR Collimated Beam Shaper Module
 Engineering ID: CBSM-LINE-355-6MM-CUSTOM
 Vendor PN status: Custom RFQ; final HOLO/OR PN pending
+Laser coherence: Fully coherent CW
+Laser waist location: 0.000000 mm
+Laser waist X/Y full 1/e^2 diameters: 1.000000 / 1.000000 mm
+Laser ellipticity / rotation: 1.000000 / 0.000000 deg
+Laser measured M2X/M2Y: 1.200000 / 1.200000
+Laser full divergence X/Y: 0.000542400046 / 0.000542400046 rad
+Gaussian reference-model verification pass: 1
 Last lens: Y-only fY=100.000000 mm
 Last lens X optical power: 0 1/mm
 Target X geometric width: 1.500000000 mm
@@ -13,5 +20,7 @@ Geometric ABCD verification pass: 1
 Vendor phase data available: 0
 Vendor phase verification pass: 0
 Independent phase-surrogate pass: 1
+Y M2 propagation pass: 1
+Calculated target Y full 1/e^2 width: 0.001000000 mm
 Design verification pass: 1
 Vendor acceptance pass: 0

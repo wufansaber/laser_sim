@@ -1,0 +1,10 @@
+name=retain_w154_o120
+designWidth_mm=1.540000000
+superGaussianOrder=120
+jointIterations=600
+measuredWidth_mm=1.532754588424
+uniformity_percent=84.816715113349
+meanTilt_urad=1.245492956680
+curvatureEdgeSlope_urad=13.929685538401
+widthChange100mm_percent=4.137381903631
+pass=0

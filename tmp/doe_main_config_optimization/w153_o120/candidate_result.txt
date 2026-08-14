@@ -1,0 +1,10 @@
+name=w153_o120
+designWidth_mm=1.530000000
+superGaussianOrder=120
+jointIterations=420
+measuredWidth_mm=1.520315819759
+uniformity_percent=82.252888201171
+meanTilt_urad=-1.107780742038
+curvatureEdgeSlope_urad=14.261877233751
+widthChange100mm_percent=4.259924559990
+pass=0

@@ -1,0 +1,10 @@
+name=fine_w1545_o100
+designWidth_mm=1.545000000
+superGaussianOrder=100
+jointIterations=720
+measuredWidth_mm=1.532798834942
+uniformity_percent=85.040634099012
+meanTilt_urad=-0.113300380666
+curvatureEdgeSlope_urad=15.725898406589
+widthChange100mm_percent=3.831030861856
+pass=0

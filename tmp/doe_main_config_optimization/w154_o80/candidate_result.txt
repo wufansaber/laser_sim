@@ -1,0 +1,10 @@
+name=w154_o80
+designWidth_mm=1.540000000
+superGaussianOrder=80
+jointIterations=360
+measuredWidth_mm=1.531262272895
+uniformity_percent=80.960042772119
+meanTilt_urad=-0.174748893645
+curvatureEdgeSlope_urad=18.630050106312
+widthChange100mm_percent=5.029274156650
+pass=0

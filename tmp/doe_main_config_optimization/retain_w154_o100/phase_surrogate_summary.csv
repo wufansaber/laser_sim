@@ -1,0 +1,42 @@
+parameter,value,unit
+Model identity,Independent two-element quantized fused-silica relief phase surrogate,-
+Vendor proprietary phase,No,-
+Coherence,Fully coherent CW,-
+Laser waist location,0,mm
+Laser waist X diameter,1,mm
+Laser X M2,1.2,-
+Laser X full divergence,0.542400046057179,mrad full angle
+Laser X Rayleigh range,1843.65766055739,mm
+Laser ellipticity,1.1,-
+Laser ellipse rotation,90,deg
+First spherical expander magnification,5,x
+SBE output / DOE1 input width,5.00117709914461,mm
+Wavelength,355,nm
+DOE1 to DOE2 free-space separation,100,mm
+DOE2 to target distance,450,mm
+Target design X width,1.54,mm
+Super-Gaussian order,100,-
+Phase-optimization iterations,200,-
+DOE substrate index,1.47607188038016,-
+DOE phase levels,32,-
+DOE binary masks,5,-
+DOE requested minimum feature,5,um
+DOE actual cell pitch,6.103515625,um
+DOE patterned X width,8,mm
+DOE 2pi relief depth,0.745685713923113,um
+DOE relief height step,0.0233026785600973,um
+Ideal phase-quantization efficiency,99.6791364044961,%
+Target measured 1/e2 width,1.53303227368523,mm
+Target measured FWHM,1.45714574734257,mm
+Target width error,2.20215157901542,%
+Central 90 percent min/max uniformity,85.3884336897734,%
+Minimum accepted uniformity,90,%
+Target mean wavefront tilt,4.43753031813126,urad
+Target fitted wavefront radius,46534.3283371027,mm
+Target curvature edge slope,16.1171338837615,urad
+Forward propagation check distance,100,mm
+Forward-check 1/e2 width,1.57693602149644,mm
+Forward-check width change,2.86385019838262,%
+Maximum accepted width change,1,%
+Target phase RMS diagnostic only,0.124270338951895,rad
+Surrogate pass,0,0/1

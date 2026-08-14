@@ -1,0 +1,10 @@
+name=w152_o120
+designWidth_mm=1.520000000
+superGaussianOrder=120
+jointIterations=420
+measuredWidth_mm=1.512331973845
+uniformity_percent=80.061726152006
+meanTilt_urad=2.044569608083
+curvatureEdgeSlope_urad=11.510024177198
+widthChange100mm_percent=5.885657787345
+pass=0

@@ -8,7 +8,10 @@ z=[p.zLaser;p.zSBE1;p.zSBE2;p.zCBSM1;p.zCBSM2;p.zYBE1;p.zYBE2; ...
 axisPower={'-';'XY';'XY';'X phase';'X phase';'Y';'Y';'X';'X';'Y';'-'};
 fX=[Inf;p.fSBE1;p.fSBE2;Inf;Inf;Inf;Inf;p.fXC1;p.fXC2;Inf;Inf];
 fY=[Inf;p.fSBE1;p.fSBE2;Inf;Inf;p.fYBE1;p.fYBE2;Inf;Inf;p.fYFL;Inf];
-description={'355 nm laser';'First optic: spherical negative expander'; ...
+description={sprintf(['355 nm fully coherent CW waist; Dx=%.4f mm, ' ...
+    'Dy=%.4f mm, M2x=%.3f, M2y=%.3f'],cfg.laser.waistDiameterX, ...
+    cfg.laser.waistDiameterY,cfg.laser.M2X,cfg.laser.M2Y); ...
+    'First optic: spherical negative expander'; ...
     'Spherical positive expander';'Custom HOLO/OR collimated-line module DOE 1'; ...
     'Custom module phase-flattening DOE 2';'Y-only negative cylinder'; ...
     'Y-only positive cylinder';'X-only positive compressor cylinder'; ...
@@ -18,15 +21,19 @@ description={'355 nm laser';'First optic: spherical negative expander'; ...
 writetable(table(ids,z,axisPower,fX,fY,description), ...
     fullfile(outputDir,'holoor_collimated_optical_layout.csv'));
 
-% X geometric envelope: 1 -> 6 mm, custom module maintains 6 mm,
-% afocal CXC compresses 6 -> 1.5 mm, YFL leaves X unchanged.
-[z1,r1]=constantSegment(0,p.zSBE1,cfg.laserDiameter/2);
-[z2,r2]=linearSegment(p.zSBE1,p.zSBE2,cfg.laserDiameter/2,cfg.conditionedDiameter/2);
-[z3,r3]=constantSegment(p.zSBE2,p.zCXC1,cfg.moduleOutputXWidth/2);
+% X envelope: measured-M2 Gaussian q propagation from the laser waist
+% through the spherical expander, followed by the shaped-line envelope.
+qx=1i*pi*cfg.laser.waistRadiusX^2/(cfg.laser.M2X*cfg.lambda);
+[z1,r1,qx]=qSegment(qx,p.zLaser,p.zSBE1,cfg.laser.M2X);
+qx=applyQLens(qx,p.fSBE1);
+[z2,r2,qx]=qSegment(qx,p.zSBE1,p.zSBE2,cfg.laser.M2X);
+qx=applyQLens(qx,p.fSBE2);
+[z2b,r2b,qx]=qSegment(qx,p.zSBE2,p.zCBSM1,cfg.laser.M2X);
+[z3,r3]=constantSegment(p.zCBSM1,p.zCXC1,cfg.moduleOutputXWidth/2);
 [z4,r4]=linearSegment(p.zCXC1,p.zCXC2,cfg.moduleOutputXWidth/2,cfg.targetXWidth/2);
 [z5,r5]=constantSegment(p.zCXC2,p.zTarget,cfg.targetXWidth/2);
-zx=[z1 z2(2:end) z3(2:end) z4(2:end) z5(2:end)];
-rx=[r1 r2(2:end) r3(2:end) r4(2:end) r5(2:end)];
+zx=[z1 z2(2:end) z2b(2:end) z3(2:end) z4(2:end) z5(2:end)];
+rx=[r1 r2(2:end) r2b(2:end) r3(2:end) r4(2:end) r5(2:end)];
 drawPath(zx,rx,'X',ids,z,axisPower, ...
     'HOLO/OR custom collimated line - XZ optical layout', ...
     fullfile(outputDir,'holoor_collimated_xz_optical_path.png'), ...
@@ -34,15 +41,19 @@ drawPath(zx,rx,'X',ids,z,axisPower, ...
     'YFL at Z=600 mm: Y-only, X optical power=0\n' ...
     'Target: X geometric width=1.5 mm, parallel marginal rays']));
 
-% Y geometric envelope.
-[y1,q1]=constantSegment(0,p.zSBE1,cfg.laserDiameter/2);
-[y2,q2]=linearSegment(p.zSBE1,p.zSBE2,cfg.laserDiameter/2,cfg.conditionedDiameter/2);
-[y3,q3]=constantSegment(p.zSBE2,p.zYBE1,cfg.conditionedDiameter/2);
-[y4,q4]=linearSegment(p.zYBE1,p.zYBE2,cfg.conditionedDiameter/2,cfg.finalYBeamDiameter/2);
-[y5,q5]=constantSegment(p.zYBE2,p.zYFL,cfg.finalYBeamDiameter/2);
-y6=linspace(p.zYFL,p.zTarget,180);
-q6=(cfg.finalYBeamDiameter/2)+(cfg.targetYWidth/2-cfg.finalYBeamDiameter/2)* ...
-    (y6-p.zYFL)/(p.zTarget-p.zYFL);
+% Y measured-M2 Gaussian q envelope through every powered Y surface.
+qy=1i*pi*cfg.laser.waistRadiusY^2/(cfg.laser.M2Y*cfg.lambda);
+[y1,q1,qy]=qSegment(qy,p.zLaser,p.zSBE1,cfg.laser.M2Y);
+qy=applyQLens(qy,p.fSBE1);
+[y2,q2,qy]=qSegment(qy,p.zSBE1,p.zSBE2,cfg.laser.M2Y);
+qy=applyQLens(qy,p.fSBE2);
+[y3,q3,qy]=qSegment(qy,p.zSBE2,p.zYBE1,cfg.laser.M2Y);
+qy=applyQLens(qy,p.fYBE1);
+[y4,q4,qy]=qSegment(qy,p.zYBE1,p.zYBE2,cfg.laser.M2Y);
+qy=applyQLens(qy,p.fYBE2);
+[y5,q5,qy]=qSegment(qy,p.zYBE2,p.zYFL,cfg.laser.M2Y);
+qy=applyQLens(qy,p.fYFL);
+[y6,q6,qy]=qSegment(qy,p.zYFL,p.zTarget,cfg.laser.M2Y); %#ok<ASGLU>
 zy=[y1 y2(2:end) y3(2:end) y4(2:end) y5(2:end) y6(2:end)];
 ry=[q1 q2(2:end) q3(2:end) q4(2:end) q5(2:end) q6(2:end)];
 drawPath(zy,ry,'Y',ids,z,axisPower, ...
@@ -83,5 +94,14 @@ drawPath(zy,ry,'Y',ids,z,axisPower, ...
     function [zz,rr]=linearSegment(a,b,ra,rb)
         zz=linspace(a,b,120); rr=ra+(rb-ra)*(zz-a)/(b-a);
     end
+    function [zz,rr,qEnd]=qSegment(qStart,a,b,m2)
+        zz=linspace(a,b,160);
+        qAlong=qStart+(zz-a);
+        inverseQ=1./qAlong;
+        rr=sqrt(-m2*cfg.lambda./(pi*imag(inverseQ)));
+        qEnd=qStart+(b-a);
+    end
+    function qOut=applyQLens(qIn,f)
+        qOut=1/(1/qIn-1/f);
+    end
 end
-
