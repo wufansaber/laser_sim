@@ -1,0 +1,13 @@
+OpticStudio executable: C:\Program Files\Ansys Zemax OpticStudio 2022 R2.02\OpticStudio.exe
+OpticStudio API version directory: C:\Program Files\Ansys Zemax OpticStudio 2022 R2.02
+Zemax data directory: C:\Users\wufan\Documents\Zemax
+Validated file: D:\work\git_share\laser_sim\deliverables\FINAL_HYBRID_DOE_LENS_355nm_package\06_zemax_sequential\final_hybrid_355nm_SEQ_OpticStudio2022R2_validated.ZMX
+Reopen status: PASS
+Sequential surface count: 20
+Pre-DOE zero-thickness POP reference surface: 13 = PASS
+Grid Phase surfaces: 14 (DOE-A-X), 15 (DOE-A-Y), 16 (DOE-B-X) = PASS
+Toroidal surfaces: 5, 8, 9, 12, 18 = PASS
+HPFS7980 material surfaces: 1, 3, 5, 7, 9, 11, 17 = PASS
+UVFS_DOE material surface: 15 = PASS
+Embedded Grid Phase arrays: S14=2400x3, S15=3x201, S16=2400x3 = PASS
+DAT A/B companion files copied to the Grid Files directory = PASS

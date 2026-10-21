@@ -1,7 +1,0 @@
-item,valuePercent,note
-"Single-DOE 32-level phase quantization",99.6791364044961,"Phase-level upper bound"
-"Two-DOE phase quantization",99.3593023434614,"Product of two phase-level factors"
-"Single uncoated surface reflection",3.69673708475886,"Normal-incidence Fresnel estimate"
-"Four uncoated surfaces transmission",86.0129826771772,"Four air/silica interfaces"
-"Two DOE, uncoated theoretical upper bound",85.4618995128455,"Excludes scatter, absorption and target spillover"
-"Two DOE, 0.5% residual-R per surface upper bound",97.386970574392,"Requires qualified 355 nm AR coating"

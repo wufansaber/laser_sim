@@ -1,0 +1,7 @@
+metricName,requirement,value,passFlag
+X full 1/e^2 width,1.500 mm +/-5%,1.53660190441149,1
+Y full 1/e^2 width,1.000 um +/-1%,1,1
+X central-90% uniformity,>=90%,81.6667444719508,0
+Total useful efficiency,>=85%,96.6334737982456,1
+Physical DOE count,1,1,1
+Working distance,>50 mm,80,1

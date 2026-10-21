@@ -1,0 +1,9 @@
+component,componentType,frontZ,backZ,centerThickness,airGapBefore,nominalFocalX,nominalFocalY,frontRadiusX,frontRadiusY,backRadiusX,backRadiusY,backConicY,diameter,minimumEdgeThickness,material
+SBE1,spherical plano-concave,30,33,3,30,-10,-10,-4.76088887171704,-4.76088887171704,Inf,Inf,0,4,3,HPFS7980
+SBE2,spherical plano-convex,68.2577381614108,72.2577381614108,4,35.2577381614108,50,50,Inf,Inf,-23.8044443585852,-23.8044443585852,0,8,3.66152187383273,HPFS7980
+XRL1,X cylindrical plano-convex,100,104,4,27.7422618385892,100,Inf,47.6088887171704,Inf,Inf,Inf,0,10,3.73671598784858,HPFS7980
+XRL2,X cylindrical plano-concave,134.257738161411,137.257738161411,3,30.2577381614108,-65,Inf,Inf,Inf,30.9457776661607,Inf,0,10,3,HPFS7980
+YBE1,Y cylindrical plano-concave,220,223,3,82.7422618385892,Inf,-20,Inf,-9.52177774343408,Inf,Inf,0,10,3,HPFS7980
+YBE2,Y cylindrical plano-convex,350.627114653423,362.627114653423,12,127.627114653423,Inf,157.789104307543,Inf,Inf,Inf,-75.1216390775981,-0.458960149913053,50,7.71804371181672,HPFS7980
+DOE plate,plane-parallel double-sided phase plate,480,492,12,117.372885346577,NaN,Inf,Inf,Inf,Inf,Inf,0,50,12,UVFS_DOE
+Final Y cylinder,independent Y cylindrical plano-convex,512,532,20,20,Inf,80,Inf,Inf,Inf,-38.0871109737363,-2.1788384028318,50,12.634648717011,HPFS7980

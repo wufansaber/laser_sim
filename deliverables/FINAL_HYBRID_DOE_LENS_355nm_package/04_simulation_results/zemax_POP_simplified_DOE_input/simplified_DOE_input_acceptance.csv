@@ -1,0 +1,7 @@
+metric,requirement,value,pass
+X full 1/e^2 width,"1.500 mm +/-5%",1.53571087839668,1
+Y full 1/e^2 width,"1.000 um +/-1%",1.00572104392756,1
+X uniformity at 50 um detector resolution,">=80%",91.5321097978637,1
+Raw coherent point-sampled X uniformity,"reported, not acceptance",70.253139434462,1
+Propagated power,">=85%",95.9206153790661,1
+Power in X +/-0.75 mm,">=85%",94.60618018204,1

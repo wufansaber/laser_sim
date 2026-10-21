@@ -1,0 +1,17 @@
+Material: Fused silica (Malitson Sellmeier model)
+Wavelength: 355 nm
+Physical substrate count: 1
+Substrate thickness: 12.000 mm
+Clear aperture: 50.000 mm
+Pattern width per face: 12.000 mm
+Cell pitch: 5.000000 um
+Common X pattern datum offset: 2.500000 um
+Relief levels: 16; binary masks per face: 4
+2pi relief depth: 0.745685714 um
+Height step: 0.046605357 um
+Mask 1 etch contribution: 0.046605357 um
+Mask 2 etch contribution: 0.093210714 um
+Mask 3 etch contribution: 0.186421428 um
+Mask 4 etch contribution: 0.372842857 um
+DOE surface B carries X relief only.  The fY=80.000 mm HPFS 7980 Y cylinder is a separate downstream element.
+CSV mask convention: 1=open/expose/etch, 0=protect. Confirm polarity and etch selectivity before release.

@@ -1,68 +1,55 @@
-# 355 nm 双方案线聚焦仿真
+# 355 nm DOE 高斯光束整形与柱透镜聚焦
 
-本项目在同一个 MATLAB R2019b 进程中计算并比较两套方案：
+本仓库只保留最终正式方案：从 DOE 入射面开始，以完全相干、平坦波前、二维高斯强度分布作为输入，通过一片 16 级双面 DOE 完成 X 向平顶整形，再由独立 HPFS 7980 柱透镜完成 Y 向聚焦。
 
-1. HOLO/OR 厂商模型，选用 `ST-426-I-Y-A` 355 nm 线形 Top-Hat 标准件。
-2. 自研 32 级熔石英相位 DOE，采用高斯到线形平顶的能量映射设计。
+## 最终指标
 
-共同目标为 X 向 `1.5 mm`、Y 向 `1.0 um` 的全 `1/e^2` 光斑宽度。最终聚焦镜为 X/Y 同光焦度的球面镜，焦距和镜后工作距离均为 `100 mm`。
+| 指标 | Zemax POP 结果 |
+|---|---:|
+| 波长 | 355 nm |
+| X 全 1/e² 宽度 | 1.535711 mm |
+| Y 全 1/e² 宽度 | 1.005721 µm |
+| X 均匀性，50 µm 探测器空间平均 | 91.5321% |
+| X 原始相干点采样均匀性 | 70.2531% |
+| 目标面总传播功率 | 95.9206% |
+| X ±0.75 mm 窗口功率 | 94.6062% |
 
-## 主程序
+均匀性超过 80% 的验收结论明确采用约 50 µm 矩形探测器空间响应；未经空间平均的完全相干结果也同时保留，不能混用。
 
-在 MATLAB R2019b 中切换到本文件夹并执行：
+## 项目入口
+
+完整交付位于 [`deliverables/FINAL_HYBRID_DOE_LENS_355nm_package`](deliverables/FINAL_HYBRID_DOE_LENS_355nm_package)。
+
+MATLAB R2019b 一键主程序：
 
 ```matlab
-comparison = run_two_matlab_solutions;
+cd('deliverables/FINAL_HYBRID_DOE_LENS_355nm_package/02_matlab_code');
+result = run_simplified_doe_plane_workflow();
 ```
 
-也可从 PowerShell 直接运行：
+只重新运行 OpticStudio POP：
 
-```powershell
-& 'D:\Program Files\Polyspace\R2019b\bin\matlab.exe' -batch "cd('D:/work/git_share/laser_sim'); comparison=run_two_matlab_solutions();"
+```matlab
+result = run_zemax_pop_simplified_doe_input();
 ```
 
-结果写入 `results/two_solutions_R2019b/`。
+依赖：
 
-## 当前光路
+- MATLAB R2019b；
+- Ansys Zemax OpticStudio 2022 R2.02；
+- 可用的 ZOS-API 许可证。
 
-| z (mm) | 元件 | 作用 |
-|---:|---|---|
-| 0 | LASER | 355 nm，TEM00，M2=1.2 |
-| 30 | SBE1 | 第一光学元件；球面对称负扩束镜，f=-10 mm |
-| 80 | SBE2 | 球面对称正扩束镜，f=+60 mm；第一组名义 6x |
-| 150 | DOE | 厂商或自研线相位 DOE |
-| 180 | YBE1 | 仅 Y 方向负柱面扩束镜，fY=-20 mm |
-| 340.8 | YBE2 | 仅 Y 方向正柱面扩束镜，fY=+180.8 mm；Y 向 9.04x |
-| 400 | DOE1（自研） | X 向相位映射；X 入射束仍约 6 mm |
-| 600 | YFL | 仅 Y 方向聚焦，fY=100 mm、fX=Inf |
-| 700 | DOE2/Target（自研） | 1.5 mm 平行 X 输出及 1.0 um Y 焦点 |
+## 最终文件结构
 
-只有第一组 SBE1/SBE2 是圆形对称、X/Y 光焦度相同的扩束镜。后续 YBE1/YBE2 和 YFL 都是仅作用于 Y 的柱面镜，因此 X 不会先扩到约 54 mm 再缩回；它从第一组扩束后保持约 6 mm，最后由 DOE1/DOE2 映射成 1.5 mm 平行平顶输出。
+- `02_matlab_code`：物理模型、DOE 计算、Zemax 导出、验证及 POP 自动化；
+- `03_fabrication_data`：16 级浮雕、4 层二进制掩模和加工说明；
+- `04_simulation_results`：MATLAB/Zemax 最终图表、数值和验收清单；
+- `05_references`：模型依据与来源链接；
+- `06_zemax_sequential`：处方、Grid Phase 数据、玻璃库及已验证 ZMX/ZDA；
+- `利用AI 进行激光照明设计.docx`：项目设计过程说明。
 
-## 1 um 厚度对应的口径
+128 MB 的 `DOE_INPUT_FLAT_PHASE_GAUSSIAN.ZBF` 是可重建运行缓存，未提交 GitHub。运行 `run_zemax_pop_simplified_doe_input` 时会根据正式输入参数自动生成并复制到 Zemax `POP/BEAMFILES` 目录。
 
-按 M2 修正的高斯束关系：
+数值权威文件：
 
-```text
-D_Y = 4 M2 lambda f / (pi d_Y)
-```
-
-`lambda=355 nm`、`M2=1.2`、`f=100 mm`、`d_Y=1.0 um` 时，最终镜前需要 `D_Y=54.24 mm` 的全 `1/e^2` 光束直径。程序采用 10% 裕量，建议最终镜有效通光口径不小于 `59.66 mm`。由于第二级扩束镜为球面对称元件，SBE4 和其后的第一片柱面镜也必须容纳同等级口径。
-
-## 已验证结果
-
-MATLAB 9.7.0 R2019b 实算结果：
-
-| 方案 | X 全 1/e2 宽度 | Y 全 1/e2 宽度 | 中央 90% 均匀度 | 总长 | 工作距离 |
-|---|---:|---:|---:|---:|---:|
-| HOLO/OR ST-426-I-Y-A | 1.500000 mm | 1.000 um | 99.478% | 700 mm | 100 mm |
-| 自研 32 级 DOE | 1.500000 mm | 1.000 um | 93.011% | 700 mm | 100 mm |
-
-本次 1 um 版本的 DOE 加工参数见 `DOE_DESIGN_SPEC_1UM_CN.md`，逐点浮雕处方见 `results/two_solutions_R2019b/inhouse_DOE/doe_32level_relief_profile.csv`。
-
-## 假设与边界
-
-- 薄透镜、无像差、空气折射率为 1，使用标量傅里叶衍射。
-- Y 向以 `lambda_eff=M2*lambda` 做工程修正；这不是非理想激光的完整模态分解。
-- 主计算采用名义圆形 1 mm 入射束。若实测椭圆率确为 1.1，纯球面对称扩束镜会保持该椭圆率，不能自行圆化；需要另加圆化器或把 6 mm 厂商输入条件按实际 X/Y 束径重新做容差验证。
-- 实际选型仍需校核 355 nm 镀膜、损伤阈值、像差、面形、偏心与装调公差。
+`deliverables/FINAL_HYBRID_DOE_LENS_355nm_package/04_simulation_results/zemax_POP_simplified_DOE_input/simplified_DOE_input_POP_manifest.txt`

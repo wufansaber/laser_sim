@@ -1,0 +1,12 @@
+source=coherent flat-phase Gaussian at DOE-A
+sourceFullDiameterX=3.25
+sourceFullDiameterY=45.16
+sourcePhaseRms=0
+quantizationLevels=16
+targetFullWidthX=1.5357108784
+targetFullWidthY=0.00100572104393
+targetXUniformityRaw=0.702531394345
+targetXUniformity50um=0.915321097979
+detectorAveragingWidth=0.0498046875
+targetPower=0.959206153791
+targetXWindowPower=0.94606180182

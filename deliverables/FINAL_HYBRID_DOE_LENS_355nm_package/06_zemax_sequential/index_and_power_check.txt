@@ -1,0 +1,9 @@
+Wavelength = 0.355 um
+n_HPFS7980(355 nm, 22 C) = 1.476088887172
+n_UVFS_DOE(355 nm) = 1.476071880380
+DOE physical thickness = 12.000000 mm
+DOE effective propagation thickness t/n = 8.129685389650 mm
+Final HPFS Y-cylinder radius = -38.087110974 mm; clear semi-diameter = 25.000000 mm
+Final Y-cylinder edge sag = 7.365351283 mm; minimum edge thickness = 12.634648717 mm
+DOE-to-final-cylinder air gap = 20.000000 mm
+Target Z = 612.000000 mm; air working distance after final Y cylinder = 80.000000 mm

@@ -1,6 +1,0 @@
-checks,value,limit,unit,pass
-CXC telescope afocal (C=0),0,1e-12,1/mm,1
-Last lens X optical power,0,1e-12,1/mm,1
-X width after CXC,1.5,1.5,mm,1
-X width at target,1.5,1.5,mm,1
-Geometric marginal-ray angle at target,0,1e-12,rad,1
